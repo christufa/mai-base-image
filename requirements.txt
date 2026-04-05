@@ -1,0 +1,6 @@
+transformers
+datasets
+tokenizers
+accelerate
+huggingface-hub
+evaluate

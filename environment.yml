@@ -1,0 +1,17 @@
+name: ds
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch
+  - jupyterlab
+  - jupyterlab-git
+  - ipywidgets
+  - ipython
+  - nbformat
+  - nbconvert
+  - pip 
+  - pip:
+    - -r requirements.txt
