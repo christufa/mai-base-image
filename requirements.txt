@@ -1,6 +1,8 @@
-transformers
-datasets
-tokenizers
-accelerate
-huggingface-hub
-evaluate
+torch>=2.11.0
+transformers>=4.50
+datasets>=2.20
+tokenizers>=0.19
+accelerate>=0.34
+huggingface-hub>=0.36
+evaluate>=0.4.6
+accelerate>=1.13.0
