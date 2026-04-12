@@ -44,6 +44,8 @@ ENV CONDA_ENV_NAME=${CONDA_ENV_NAME}
 # User identity (runtime-readable, not used by RUN commands — use the ARGs below)
 ENV USERNAME=${USERNAME}
 
+
+
 # =============================================================================
 # System packages
 # =============================================================================
@@ -131,6 +133,14 @@ RUN echo "source ${CONDA_DIR}/etc/profile.d/conda.sh" >> /etc/profile.d/conda-in
 RUN git config --system core.editor "vim" \
     && git config --system pull.rebase false \
     && git lfs install --system
+
+# =============================================================================
+# Claude Code
+# =============================================================================
+RUN su - ${USERNAME} -c \
+    "curl -fsSL https://claude.ai/install.sh | bash" \
+    && echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/${USERNAME}/.zshrc \
+    && echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/${USERNAME}/.bashrc
 
 # =============================================================================
 # Entrypoint & workspace
