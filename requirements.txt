@@ -8,3 +8,6 @@ huggingface-hub>=0.36
 evaluate>=0.4.6
 accelerate>=1.13.0
 kernels>=0.12.3
+plotly==6.7.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
