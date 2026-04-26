@@ -12,3 +12,4 @@ plotly==6.7.0
 scikit-learn==1.8.0
 matplotlib==3.10.8
 scipy==1.17.1
+plotly==6.7.0
